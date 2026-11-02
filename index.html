@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RCB CHAMPIONS Accessories Shop | Pro Cricket Equipment & Ground Nets</title>
+  
+  <!-- Favicon Data URI to eliminate browser 404 errors -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏏</text></svg>">
+  
+  <!-- Bootstrap 5 CSS Framework -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Vector Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Custom Project Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- EmailJS Browser SDK for Direct Client-Side Email Delivery -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function() {
+      if (window.emailjs) {
+        emailjs.init({ publicKey: "F-HN8UkASySYesiCq" });
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Top Promotional Banner -->
+  <div class="top-announcement-bar bg-danger text-white py-2 px-3 text-center small fw-bold">
+    <i class="bi bi-fire me-1 text-warning"></i> PLAY BOLD! Match Ready Grade 1 Willow Bats, Academy Practice Nets &amp; Pro Kits In Stock.
+  </div>
+
+  <!-- Primary Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-danger d-flex align-items-center gap-2" href="#">
+        <i class="bi bi-shield-shaded text-warning fs-3"></i>
+        <span><span class="text-white">RCB</span> CHAMPIONS</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-3">
+          <li class="nav-item"><a class="nav-link active" href="#productsSection">Store</a></li>
+          <li class="nav-item"><a class="nav-link" href="#categoryShowcase">Categories</a></li>
+          <li class="nav-item"><a class="nav-link" href="#netsFacility">Practice Nets &amp; Turfs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#aboutSection">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contactSection">Contact</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-outline-warning position-relative px-3 fw-semibold" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+            <i class="bi bi-cart3 me-1"></i> Cart
+            <span id="cartBadge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Header Section -->
+  <header class="hero-section text-center text-light d-flex align-items-center justify-content-center">
+    <div class="container py-5">
+      <span class="badge bg-warning text-dark px-3 py-2 mb-3 fw-bold tracking-wider">OFFICIAL CRICKET WAREHOUSE</span>
+      <h1 class="display-4 fw-bold text-uppercase">RCB CHAMPIONS <br><span class="text-warning">Accessories Shop</span></h1>
+      <p class="lead mx-auto mt-2 text-light" style="max-width: 720px;">
+        Grade 1 English Willow, Red/White/Pink Match Balls, Impact Protection Pads, Academy Practice Nets, and Heavy Tournament Gear.
+      </p>
+      <div class="d-flex justify-content-center gap-3 mt-4">
+        <a href="#productsSection" class="btn btn-danger btn-lg fw-bold px-4 shadow">Explore Store</a>
+        <a href="#netsFacility" class="btn btn-outline-light btn-lg fw-bold px-4">Academy Nets</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Quick Category Showcase -->
+  <section class="py-5 bg-white border-bottom" id="categoryShowcase">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-1 text-uppercase tracking-wider">CRICKET EQUIPMENT CATALOGUE</h2>
+      <p class="text-muted mb-4">Click any category for quick filtering</p>
+      <div class="row g-3">
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="category-card p-3 border rounded shadow-sm" onclick="setCategoryFilter('Cricket Bats')">
+            <i class="bi bi-trophy text-danger fs-2 mb-1 d-block"></i>
+            <h6 class="fw-bold mb-0">Cricket Bats</h6>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="category-card p-3 border rounded shadow-sm" onclick="setCategoryFilter('Cricket Balls')">
+            <i class="bi bi-circle-fill text-danger fs-2 mb-1 d-block"></i>
+            <h6 class="fw-bold mb-0">Cricket Balls</h6>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="category-card p-3 border rounded shadow-sm" onclick="setCategoryFilter('Leg Guards')">
+            <i class="bi bi-shield-check text-danger fs-2 mb-1 d-block"></i>
+            <h6 class="fw-bold mb-0">Leg Guards</h6>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="category-card p-3 border rounded shadow-sm" onclick="setCategoryFilter('Batting Gloves')">
+            <i class="bi bi-hand-index-thumb text-danger fs-2 mb-1 d-block"></i>
+            <h6 class="fw-bold mb-0">Gloves</h6>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="category-card p-3 border rounded shadow-sm" onclick="setCategoryFilter('Cricket Nets & Ground')">
+            <i class="bi bi-grid-3x3 text-danger fs-2 mb-1 d-block"></i>
+            <h6 class="fw-bold mb-0">Nets &amp; Pitch</h6>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="category-card p-3 border rounded shadow-sm" onclick="setCategoryFilter('Tournament Kits')">
+            <i class="bi bi-backpack4 text-danger fs-2 mb-1 d-block"></i>
+            <h6 class="fw-bold mb-0">Kit Bags</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Store Section -->
+  <main class="container my-5" id="productsSection">
+    <div class="row mb-4 align-items-center">
+      <div class="col-md-5 mb-3 mb-md-0">
+        <h2 class="fw-bold mb-1">Equipment Catalog</h2>
+        <p class="text-muted mb-0" id="productCountText">Showing tournament-certified gear</p>
+      </div>
+      <!-- Search & Brand/Category Filters -->
+      <div class="col-md-7 d-flex flex-wrap gap-2 justify-content-md-end">
+        <div class="input-group search-box-wrapper">
+          <input type="text" id="searchInput" class="form-control" placeholder="Search bat, ball, net...">
+          <button class="btn btn-danger" id="searchBtn" type="button"><i class="bi bi-search"></i></button>
+        </div>
+        <select id="brandFilter" class="form-select w-auto">
+          <option value="All">All Brands</option>
+          <option value="MRF">MRF</option>
+          <option value="SS">SS TON</option>
+          <option value="SG">SG</option>
+          <option value="CEAT">CEAT</option>
+          <option value="Nike">Nike</option>
+          <option value="Spartan">Spartan</option>
+          <option value="Hero">Hero</option>
+          <option value="Kookaburra">Kookaburra</option>
+          <option value="Gray-Nicolls">Gray-Nicolls</option>
+          <option value="Shrey">Shrey</option>
+          <option value="DSC">DSC</option>
+          <option value="Gm">GM</option>
+          <option value="SF">SF</option>
+          <option value="NETXSPORTS">NETXSPORTS</option>
+          <option value="Heega">Heega</option>
+        </select>
+        <select id="categoryFilter" class="form-select w-auto">
+          <option value="All">All Categories</option>
+          <option value="Cricket Bats">Cricket Bats</option>
+          <option value="Cricket Balls">Cricket Balls</option>
+          <option value="Leg Guards">Leg Guards &amp; Pads</option>
+          <option value="Batting Gloves">Batting Gloves</option>
+          <option value="Cricket Nets & Ground">Cricket Nets &amp; Ground</option>
+          <option value="Tournament Kits">Tournament Kits &amp; Bags</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Product Grid Container -->
+    <div class="row g-4" id="productGrid">
+      <!-- Injected dynamically via app.js -->
+    </div>
+  </main>
+
+  <!-- Practice Nets & Turf Facility Section -->
+  <section class="py-5 bg-dark text-white border-top border-bottom border-danger" id="netsFacility">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <span class="badge bg-danger px-3 py-2 fw-bold mb-3">GROUND &amp; ACADEMY INFRASTRUCTURE</span>
+          <h2 class="fw-bold mb-3">Custom Cricket Nets &amp; Practice Pitch Setup</h2>
+          <p class="text-secondary">
+            UV-stabilized, high-tenacity 3mm nylon braided nets and heavy high-density turf mats designed for club nets, school academies, rooftop cages, and backyard box cricket setups.
+          </p>
+          <div class="row g-3 mt-2">
+            <div class="col-sm-6">
+              <div class="p-3 bg-secondary bg-opacity-25 rounded border border-secondary">
+                <h6 class="fw-bold text-warning mb-1"><i class="bi bi-bounding-box me-1"></i> Box Net Enclosures</h6>
+                <small class="text-secondary">Weather-resistant, shock-absorbing perimeter nets with steel wire fittings.</small>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="p-3 bg-secondary bg-opacity-25 rounded border border-secondary">
+                <h6 class="fw-bold text-warning mb-1"><i class="bi bi-shield-shaded me-1"></i> Turf Practice Mats</h6>
+                <small class="text-secondary">Standard 66ft &amp; half-pitch 33ft high-density artificial turf with true bounce.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <div class="border border-secondary rounded-4 p-4 bg-black bg-opacity-50">
+            <h4 class="text-warning fw-bold mb-2">Ground &amp; Academy Quotation</h4>
+            <p class="small text-secondary mb-4">Request tailored quotes for poles, boundary ropes, turf mats, or batting cages.</p>
+            <a href="#contactSection" class="btn btn-warning fw-bold px-4 py-2">Enquire Net Solutions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Store Section -->
+  <section class="py-5 bg-white border-bottom" id="aboutSection">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <span class="badge bg-danger text-white px-3 py-2 mb-2 fw-bold">CHAMPIONSHIP HERITAGE</span>
+          <h2 class="fw-bold mb-3">About RCB CHAMPIONS Accessories Shop</h2>
+          <p class="text-muted">
+            Specialized distributor of professional cricket equipment direct from certified manufacturers including MRF, SS TON, SG, CEAT, Nike, Spartan, Hero, Kookaburra, Shrey, and Gray-Nicolls[cite: 5]. All our bats undergo precision knocking and oiling before dispatch.
+          </p>
+          <ul class="list-unstyled text-secondary">
+            <li class="mb-2"><i class="bi bi-patch-check-fill text-danger me-2"></i> 100% Original Brand Verification &amp; Genuine Holograms[cite: 5]</li>
+            <li class="mb-2"><i class="bi bi-patch-check-fill text-danger me-2"></i> Club &amp; Academy Infrastructure: Artificial Turf Mats, Boundary Ropes &amp; Stumps</li>
+            <li><i class="bi bi-patch-check-fill text-danger me-2"></i> Secure High-Impact Packaging &amp; Pan-India Dispatch</li>
+          </ul>
+        </div>
+        <div class="col-lg-6 text-center">
+          <div class="p-5 bg-light rounded-4 border border-danger shadow-sm">
+            <i class="bi bi-shield-fill-check text-danger display-2 mb-3"></i>
+            <h4 class="fw-bold">100% Genuine Match Merchandise</h4>
+            <p class="text-muted small mb-0">Every product matches BCCI &amp; ICC club tournament standards.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section class="py-5 bg-light" id="contactSection">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Contact Our Equipment Specialists</h2>
+        <p class="text-muted">Need assistance choosing the correct bat weight, profile, or custom nets?</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <div class="card border-0 shadow-sm p-4 rounded-3">
+            <form id="contactForm">
+              <div class="mb-3">
+                <label class="form-label fw-semibold">Your Name</label>
+                <input type="text" class="form-control" placeholder="Enter your full name" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label fw-semibold">Email Address</label>
+                <input type="email" class="form-control" placeholder="name@example.com" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label fw-semibold">Requirement Details</label>
+                <textarea class="form-control" rows="4" placeholder="Mention bat model, net measurements, or kit requirements..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-danger w-100 py-2 fw-bold">Submit Enquiry</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shopping Cart Offcanvas Drawer -->
+  <aside class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-header bg-dark text-white border-bottom border-danger">
+      <h5 class="offcanvas-title text-warning" id="cartOffcanvasLabel"><i class="bi bi-bag-check me-2"></i>Shopping Cart</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div id="cartItemsList" class="flex-grow-1 overflow-auto">
+        <!-- Injected dynamically via app.js -->
+      </div>
+      <div class="border-top pt-3 mt-auto">
+        <div class="d-flex justify-content-between fw-bold mb-3 fs-5">
+          <span>Subtotal:</span>
+          <span id="cartTotalPrice" class="text-danger">₹0</span>
+        </div>
+        <button class="btn btn-warning w-100 fw-bold py-2" data-bs-toggle="modal" data-bs-target="#checkoutModal">Proceed to Checkout</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Checkout & Order Placement Modal -->
+  <div class="modal fade" id="checkoutModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-dark text-white">
+          <h5 class="modal-title fw-bold text-warning">Order Confirmation &amp; Email Invoice</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="orderForm">
+            <div class="mb-3">
+              <label for="custName" class="form-label fw-semibold">Full Name</label>
+              <input type="text" class="form-control" id="custName" placeholder="e.g. Rahul Sharma" required>
+            </div>
+            <div class="mb-3">
+              <label for="custEmail" class="form-label fw-semibold">Email Address (Order copy will be sent here)</label>
+              <input type="email" class="form-control" id="custEmail" placeholder="e.g. rahul@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="custPhone" class="form-label fw-semibold">Phone Number</label>
+              <input type="tel" class="form-control" id="custPhone" placeholder="10-digit mobile number" required>
+            </div>
+            <div class="mb-3">
+              <label for="custAddress" class="form-label fw-semibold">Shipping Address</label>
+              <textarea class="form-control" id="custAddress" rows="3" placeholder="Door No, Street, City, Pincode" required></textarea>
+            </div>
+            <button type="submit" id="submitOrderBtn" class="btn btn-danger w-100 py-2 fw-bold">
+              <span id="submitBtnText"><i class="bi bi-send-check-fill me-1"></i> Place Order &amp; Send Email</span>
+              <span id="submitBtnSpinner" class="spinner-border spinner-border-sm d-none" role="status"></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Product View Modal -->
+  <div class="modal fade" id="quickViewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0">
+        <div class="modal-header bg-dark text-white">
+          <h5 class="modal-title fw-bold text-warning" id="qvTitle">Product Specifications</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center p-4">
+          <div id="qvImageContainer" class="mb-3" style="height: 180px;"></div>
+          <h4 id="qvName" class="fw-bold"></h4>
+          <p id="qvSpec" class="text-muted"></p>
+          <div class="d-flex justify-content-center align-items-center gap-3 my-3">
+            <span id="qvBrand" class="badge bg-danger"></span>
+            <span id="qvCategory" class="badge bg-secondary"></span>
+            <span id="qvRating" class="text-warning fw-bold"></span>
+          </div>
+          <h3 id="qvPrice" class="text-danger fw-bold mb-4"></h3>
+          <button id="qvAddToCartBtn" class="btn btn-dark w-100 fw-bold py-2"><i class="bi bi-cart-plus me-1"></i> Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standard 4-Column Footer -->
+  <footer class="bg-dark text-light pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <h5 class="text-danger fw-bold mb-3 d-flex align-items-center gap-2">
+            <i class="bi bi-shield-shaded text-warning"></i> RCB CHAMPIONS
+          </h5>
+          <p class="text-secondary small">
+            Authorised dealer for genuine cricket bats, protection equipment, turf pitch mats, and academy practice netting systems[cite: 5]. Engineered for optimal club and tournament performance.
+          </p>
+          <div class="d-flex gap-3 fs-5 mt-3">
+            <a href="#" class="text-secondary footer-social-link"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-secondary footer-social-link"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-secondary footer-social-link"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="text-secondary footer-social-link"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="fw-bold mb-3 text-white">Quick Links</h6>
+          <ul class="list-unstyled text-secondary footer-nav-links small">
+            <li><a href="#productsSection">Store</a></li>
+            <li><a href="#categoryShowcase">Categories</a></li>
+            <li><a href="#netsFacility">Practice Nets</a></li>
+            <li><a href="#aboutSection">About Us</a></li>
+            <li><a href="#contactSection">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold mb-3 text-white">Partner Brands</h6>
+          <ul class="list-unstyled text-secondary footer-nav-links small">
+            <li>MRF Genius (VK 18)[cite: 5]</li>
+            <li>SS TON Heritage[cite: 5]</li>
+            <li>SG Sunny Tonny &amp; Test[cite: 5]</li>
+            <li>CEAT Hitman Edition[cite: 5]</li>
+            <li>Nike, Spartan &amp; Hero</li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold mb-3 text-white">Store &amp; Warehouse</h6>
+          <p class="text-secondary mb-1 small"><i class="bi bi-geo-alt-fill text-danger me-2"></i>Stadium Main Road, Sports Complex</p>
+          <p class="text-secondary mb-1 small"><i class="bi bi-telephone-fill text-danger me-2"></i>+91 98400 18180</p>
+          <p class="text-secondary small"><i class="bi bi-envelope-fill text-danger me-2"></i>orders@rcbchampionscricket.com</p>
+        </div>
+      </div>
+      <hr class="border-secondary mt-4 mb-3">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-secondary small">
+        <p class="mb-0">© 2026 RCB CHAMPIONS Accessories Shop. Built with HTML5, CSS3, Bootstrap 5 &amp; JavaScript[cite: 1].</p>
+        <p class="mb-0 text-warning">E-Commerce Capstone Project</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Main Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>

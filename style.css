@@ -1,0 +1,116 @@
+/* Color Palette and Root Custom Properties */
+:root {
+  --rcb-primary-red: #d32f2f;
+  --rcb-dark-surface: #121212;
+  --rcb-accent-gold: #ffc107;
+  --surface-card-bg: #ffffff;
+}
+
+/* Base Document Settings */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.tracking-wider {
+  letter-spacing: 1px;
+}
+
+/* Hero Section Presentation */
+.hero-section {
+  background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(211, 47, 47, 0.72)),
+              url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%231a1a1a"/><path d="M0 0 L100 100 M100 0 L0 100" stroke="%23222" stroke-width="2"/></svg>') center/cover no-repeat;
+  min-height: 48vh;
+}
+
+.search-box-wrapper {
+  max-width: 280px;
+}
+
+/* Category Quick Filter Card */
+.category-card {
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  background: #ffffff;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--rcb-primary-red) !important;
+  box-shadow: 0 8px 18px rgba(211, 47, 47, 0.2) !important;
+  color: var(--rcb-primary-red);
+}
+
+/* Product Card Styling */
+.product-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  background-color: var(--surface-card-bg);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Product Vector Container */
+.product-image-container {
+  height: 240px;
+  background: linear-gradient(180deg, #fbfbfb 0%, #f1f3f5 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #e9ecef;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-vector-img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.12));
+}
+
+.product-card:hover .product-vector-img {
+  transform: scale(1.06);
+}
+
+.badge-brand {
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+/* Cart Item Styling */
+.cart-item-row {
+  border-bottom: 1px solid #e9ecef;
+  padding: 10px 0;
+}
+
+/* Footer Hover Effects */
+.footer-social-link:hover {
+  color: var(--rcb-accent-gold) !important;
+}
+
+.footer-nav-links a {
+  text-decoration: none;
+  color: #adb5bd;
+  transition: color 0.2s;
+}
+
+.footer-nav-links a:hover {
+  color: var(--rcb-accent-gold);
+}
+
+.footer-nav-links li {
+  margin-bottom: 8px;
+}
